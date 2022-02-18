@@ -1,0 +1,22 @@
+version: '3'
+services:
+  springboot-app:
+    build:
+      context: ./validation-numbers-jumia
+      dockerfile: Dockerfile
+    image: validation-numbers-jumia
+    container_name: validation-numbers-jumia-container-be
+    ports:
+      - "8081:8081" 
+    restart: always
+  alngular-app:
+    build:
+      context: ./validationNumbersOfJumia
+      dockerfile: Dockerfile
+    image: validationnumbersofjumia
+    container_name: validation-numbers-jumia-container-fe
+    ports:
+      - "4200:80"
+    restart: always
+    depends_on:
+      - springboot-app
