@@ -9,7 +9,18 @@
 			"name": "getAllCustomers",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"customers"
+					]
+				}
 			},
 			"response": []
 		},
@@ -17,7 +28,25 @@
 			"name": "getCustomersFilteredByState",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/customers/filter?state=valid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"customers",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "valid"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -25,7 +54,25 @@
 			"name": "getCustomersFilteredByCountry",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/customers/filter?country=Cameroon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"customers",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Cameroon"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -33,7 +80,29 @@
 			"name": "getCustomersFilteredByCountryAndState",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/customers/filter?country=Cameroon&state=valid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"customers",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Cameroon"
+						},
+						{
+							"key": "state",
+							"value": "valid"
+						}
+					]
+				}
 			},
 			"response": []
 		}
